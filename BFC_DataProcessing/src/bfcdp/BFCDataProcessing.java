@@ -5,6 +5,7 @@ import java.util.List;
 
 import bfcdp.candidate.Candidate;
 import bfcdp.electoralparty.ElectoralParty;
+import bfcdp.enums.EnumResult;
 
 public class BFCDataProcessing {
     private HashMap<String,Candidate> candidates = new HashMap<String,Candidate>();
@@ -35,5 +36,51 @@ public class BFCDataProcessing {
             .filter(candidate -> candidatesId.contains(candidate.getId()))
             .toList();
         return candidates;
+    }
+
+    public void addCandidate(Candidate candidate) {
+        if(!candidates.containsKey(candidate.getId())){
+            candidates.put(candidate.getId(), candidate);
+            candidate.getElectoralParty().addCandidate(candidate.getId());
+            if(!electoralParties.contains(candidate.getElectoralParty())){
+                electoralParties.add(candidate.getElectoralParty());
+            }
+        }
+    }
+
+    public void removeCandidate(Candidate candidate) {
+        if(candidates.containsKey(candidate.getId())){
+            candidates.remove(candidate.getId());
+        }
+    }
+
+    public void addElectoralParty(ElectoralParty electoralParty) {
+        if(!electoralParties.contains(electoralParty)){
+            electoralParties.add(electoralParty);
+        }
+    }
+
+    public void removeElectoralParty(ElectoralParty electoralParty) {
+        if(electoralParties.contains(electoralParty) && electoralParty.getCandidatesId().isEmpty()){
+            electoralParties.remove(electoralParty);
+        }
+    }
+
+    // item 6 da especificacao
+    public void partiesVoteRelatory(){
+        int partyVotes = 0;
+        int totalWinners = 0;
+        for (ElectoralParty electoralParty : electoralParties) {
+            List<Candidate> candidateList = getCandidates(electoralParty);
+            for (Candidate candidate : candidateList) {
+                partyVotes+=candidate.getVotes();
+                if(candidate.getResult() == EnumResult.WIN){
+                    totalWinners++;
+                } 
+            }
+            System.out.println("Total de votos do partido " + electoralParty.getAcronym() + ": " + partyVotes);
+            partyVotes = 0;
+        }
+        System.out.println("Total de candidatos eleitos: " + totalWinners);
     }
 }
