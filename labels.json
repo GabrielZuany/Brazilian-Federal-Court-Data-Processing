@@ -1,0 +1,16 @@
+{
+    "candidate":{
+        "Id": "NR_CANDIDATO",
+        "BallotBoxId": "NM_URNA_CANDIDATO",
+        "BirthDate": "DT_NASCIMENTO",
+        "Gender<enum>": "CD_GENERO",
+        "Result<enum>": "CD_SIT_TOT_TURNO",
+        "Application<enum>": "CD_SITUACAO_CANDIDATO_TOT",
+        "VoteType<enum>": "NM_TIPO_DESTINACAO_VOTOS",
+        "ElectoralParty":{
+            "Id": "NR_PARTIDO",
+            "Acronym": "SG_PARTIDO",
+            "FederationId": "NR_FEDERACAO"
+        }
+    }
+}
