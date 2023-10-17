@@ -75,5 +75,11 @@ public abstract class Candidate {
     public int getVotes() {
         return this.votes;
     }
+
+    @Override
+    public String toString(){
+        // TODO: Build a string with all the attributes of the class
+        return "";
+    }
     
 }
