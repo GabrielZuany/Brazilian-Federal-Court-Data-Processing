@@ -7,6 +7,7 @@ import bfcdp.enums.EnumApplication;
 import bfcdp.enums.EnumGender;
 import bfcdp.enums.EnumResult;
 
+
 public class FederalCandidate extends Candidate{
 
     public FederalCandidate(String id, String ballotBoxId, Date birthDate, EnumGender gender, EnumResult result,

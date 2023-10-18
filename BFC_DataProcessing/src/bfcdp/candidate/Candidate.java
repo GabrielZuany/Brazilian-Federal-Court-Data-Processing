@@ -6,6 +6,7 @@ import bfcdp.enums.EnumApplication;
 import bfcdp.enums.EnumGender;
 import bfcdp.enums.EnumResult;
 
+
 public abstract class Candidate {
     private String id;                      // NR_CANDIDATO
     private String ballotBoxId;             // NM_URNA_CANDIDATO
@@ -78,8 +79,7 @@ public abstract class Candidate {
 
     @Override
     public String toString(){
-        // TODO: Build a string with all the attributes of the class
-        return "";
+        return ballotBoxId + " (" + electoralParty.getAcronym() +  ", " + votes + " votos)\n";
     }
     
 }
