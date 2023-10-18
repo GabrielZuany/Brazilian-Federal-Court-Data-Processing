@@ -5,7 +5,7 @@ import java.util.List;
 
 import bfcdp.candidate.Candidate;
 import bfcdp.electoralparty.ElectoralParty;
-import bfcdp.enums.EnumResult;
+//import bfcdp.enums.EnumResult;
 
 public class BFCDataProcessing {
     private HashMap<String,Candidate> candidates = new HashMap<String,Candidate>();
@@ -28,7 +28,7 @@ public class BFCDataProcessing {
         return candidates;
     }
     
-    public List<Candidate> getCandidates(ElectoralParty electoralParty) {
+    /*public List<Candidate> getCandidates(ElectoralParty electoralParty) {
         List<String> candidatesId = electoralParty.getCandidatesId();
         List<Candidate> candidates = this.candidates
             .values()
@@ -36,7 +36,7 @@ public class BFCDataProcessing {
             .filter(candidate -> candidatesId.contains(candidate.getId()))
             .toList();
         return candidates;
-    }
+    }*/
 
     public void addCandidate(Candidate candidate) {
         if(!candidates.containsKey(candidate.getId())){
@@ -67,6 +67,7 @@ public class BFCDataProcessing {
     }
 
     // item 6 da especificacao
+    /*
     public void partiesVoteRelatory(){
         int partyVotes = 0;
         int totalWinners = 0;
@@ -82,5 +83,5 @@ public class BFCDataProcessing {
             partyVotes = 0;
         }
         System.out.println("Total de candidatos eleitos: " + totalWinners);
-    }
+    }*/
 }
