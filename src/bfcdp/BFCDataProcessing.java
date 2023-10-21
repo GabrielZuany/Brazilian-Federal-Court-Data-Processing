@@ -10,10 +10,22 @@ import bfcdp.enums.EnumResult;
 
 public class BFCDataProcessing {
     private HashMap<String,Candidate> candidates = new HashMap<String,Candidate>();
-    private List<ElectoralParty> electoralParties;
+    private List<ElectoralParty> electoralParties = new ArrayList<ElectoralParty>(); // switch to Set<>();
     
     public List<ElectoralParty> getElectoralParties() {
-        return electoralParties;
+        return new ArrayList<ElectoralParty>(electoralParties);
+    }
+
+    public ElectoralParty getElectoralPartyById(String electoralPartyId){
+        for (ElectoralParty electoralParty : electoralParties) {
+            if(electoralParty.getId() == null){
+                return null;
+            }
+            if(electoralParty.getId().equals(electoralPartyId)){
+                return electoralParty;
+            }
+        }
+        return null;
     }
 
     public ElectoralParty getElectoralParty(String candidateId){
@@ -25,8 +37,8 @@ public class BFCDataProcessing {
         return candidate.getElectoralParty();
     }
 
-    public HashMap<String, Candidate> getCandidates() {
-        return candidates;
+    public List<Candidate> getCandidates() {
+        return new ArrayList<Candidate>(candidates.values());
     }
     
     public List<Candidate> getCandidates(ElectoralParty electoralParty) {
@@ -52,6 +64,10 @@ public class BFCDataProcessing {
         if(candidates.containsKey(candidate.getId())){
             candidates.remove(candidate.getId());
         }
+    }
+
+    public Candidate getCandidate(String candidateId) {
+        return candidates.get(candidateId);
     }
 
     public void addElectoralParty(ElectoralParty electoralParty) {
@@ -82,5 +98,21 @@ public class BFCDataProcessing {
             partyVotes = 0;
         }
         System.out.println("Total de candidatos eleitos: " + totalWinners);
+    }
+
+    public void mostVotedCandidates(){
+        List<Candidate> candidateList = getCandidates();
+        candidateList.sort((c1, c2) -> c2.getVotes() - c1.getVotes());
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Candidato " + candidateList.get(i).getBallotBoxId() + " - " + candidateList.get(i).getElectoralParty().getAcronym() + " - " + candidateList.get(i).getVotes() + " votos");
+        }   
+    }
+
+    public void mostVotedParties(){
+        List<ElectoralParty> partidos = getElectoralParties();
+        partidos.sort((c1, c2) -> c2.getVotes() - c1.getVotes());
+        for (int i = 0; i < 10; i++) {
+            System.out.print(partidos.get(i).toString());
+        }
     }
 }

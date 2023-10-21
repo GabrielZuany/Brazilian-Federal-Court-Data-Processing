@@ -2,7 +2,6 @@ package bfcdp.electoralparty;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 public class ElectoralParty {
     private String id;                                               // equals to NR_PARTIDO
@@ -11,7 +10,13 @@ public class ElectoralParty {
     private int votesNominais;
     private int votesLegenda;
     private int candidatesWin;
-    private List<String> candidatesId = new ArrayList<String>();     // save the id of the candidates (MAP KEY)                              
+    private List<String> candidatesId = new ArrayList<String>();     // save the id of the candidates (MAP KEY)      
+    
+    public ElectoralParty(String id, String acronym, String federationId) {
+        this.id = id;
+        this.acronym = acronym;
+        this.federationId = federationId;
+    }
 
     public ElectoralParty(String id, String acronym, String federationId, int votesNominais, int votesLegenda, int candidatesWin) {
         this.id = id;
@@ -48,13 +53,25 @@ public class ElectoralParty {
         return candidatesId;
     }
 
-    public int getVotesNominais() {
-        return votesNominais;
-    }
     public int getVotesLegenda() {
-        return votesLegenda;
+        return this.votesLegenda;
     }
 
+    public int getVotesNominais(){
+        return this.votesNominais;
+    }
+    
+    public int getVotes(){
+        return this.votesLegenda + this.votesNominais;
+    }
+
+    public void addVotesLegenda(int votes) {
+        this.votesLegenda += votes;
+    }
+
+    public void addVotesNominais(int votes){
+        this.votesNominais += votes;
+    }
     
     public void addCandidate(String candidateId) {
         if(!candidatesId.contains(candidateId)){

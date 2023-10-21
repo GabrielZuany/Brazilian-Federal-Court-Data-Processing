@@ -5,6 +5,7 @@ import bfcdp.electoralparty.ElectoralParty;
 import bfcdp.enums.EnumApplication;
 import bfcdp.enums.EnumGender;
 import bfcdp.enums.EnumResult;
+import bfcdp.enums.EnumVoteType;
 
 
 public abstract class Candidate {
@@ -14,12 +15,12 @@ public abstract class Candidate {
     private EnumGender gender;              // CD_GENERO
     private EnumResult result;              // CD_SIT_TOT_TURNO
     private EnumApplication application;    // CD_SITUACAO_CANDIDATO_TOT
-    //private EnumVoteType voteType;        // NM_TIPO_DESTINACAO_VOTOS
+    private EnumVoteType voteType;        // NM_TIPO_DESTINACAO_VOTOS
     private ElectoralParty electoralParty;
-    private int votes;                      // QT_VOTOS_NOMINAIS
+    private int votes = 0;                      // QT_VOTOS_NOMINAIS
 
     public Candidate(String id, String ballotBoxId, Date birthDate, 
-                    EnumGender gender, EnumResult result, EnumApplication application, 
+                    EnumGender gender, EnumResult result, EnumApplication application, EnumVoteType voteType, 
                     ElectoralParty electoralParty) 
     {
         this.id = id;
@@ -28,11 +29,12 @@ public abstract class Candidate {
         this.gender = gender;
         this.result = result;
         this.application = application;
+        this.voteType = voteType;
         this.electoralParty = electoralParty;
     }
 
     public Candidate(String id, String ballotBoxId, Date birthDate, 
-                    EnumGender gender, EnumResult result, EnumApplication application,
+                    EnumGender gender, EnumResult result, EnumApplication application, EnumVoteType voteType,
                     ElectoralParty electoralParty, int votes) 
     {
         this.id = id;
@@ -42,6 +44,7 @@ public abstract class Candidate {
         this.result = result;
         this.application = application;
         this.electoralParty = electoralParty;
+        this.voteType = voteType;
         this.votes = votes;
     }
 
@@ -73,8 +76,16 @@ public abstract class Candidate {
         return this.electoralParty;
     }
 
+    public EnumVoteType getVoteType() {
+        return this.voteType;
+    }
+
     public int getVotes() {
         return this.votes;
+    }
+
+    public void addVotes(int votes) {
+        this.votes += votes;
     }
 
     @Override
@@ -82,22 +93,8 @@ public abstract class Candidate {
         return ballotBoxId + " (" + electoralParty.getAcronym() +  ", " + votes + " votos)\n";
     }
 
-    
-
-    /*
-    private String id;                      // NR_CANDIDATO
-    private String ballotBoxId;             // NM_URNA_CANDIDATO
-    private Date birthDate;                 // DT_NASCIMENTO
-    private EnumGender gender;              // CD_GENERO
-    private EnumResult result;              // CD_SIT_TOT_TURNO
-    private EnumApplication application;    // CD_SITUACAO_CANDIDATO_TOT
-    //private EnumVoteType voteType;        // NM_TIPO_DESTINACAO_VOTOS
-    private ElectoralParty electoralParty;
-    private int votes;  
-     */
-
     public String toStringDebug(){
-        return "CandidatoDebug: " + ballotBoxId + "  |  " + id + "  |  " + birthDate + "  |  " + gender + "  |  " + result + "  |  " + application + "  |  " + electoralParty.getAcronym() + "  |  " + votes + "\n";
+        return ballotBoxId + "  |  " + id + "  |  " + birthDate + "  |  " + gender + "  |  " + result + "  |  " + application + "  |  " + voteType + "  |  " + electoralParty.getAcronym() + "  |  " + votes + "\n";
     }
 
     
