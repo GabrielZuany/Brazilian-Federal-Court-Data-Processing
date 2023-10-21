@@ -85,6 +85,10 @@ public class ElectoralParty {
         }
     }
 
+    public void addCandidatesWin(){
+        this.candidatesWin++;
+    }
+
     @Override
     public String toString(){
         String string = "ElectoralParty: " + acronym + " - " + id + ", " + String.format("%,d", (votesNominais + votesLegenda)) + " votos" + " (" + String.format("%,d", votesNominais) + " nominais e " + String.format("%,d", votesLegenda) + " de legenda), " + String.format("%,d", candidatesWin);

@@ -115,4 +115,17 @@ public class BFCDataProcessing {
             System.out.print(partidos.get(i).toString());
         }
     }
+
+    public int getQtdCandidatosEleitos(ElectoralParty p){
+        int count = 0;
+        for(String id : p.getCandidatesId()){
+            Candidate u = getCandidate(id);
+            if(u.getResult() == EnumResult.WIN){
+                count++;
+            }
+        }
+        return count;
+    }
+
+
 }

@@ -101,12 +101,16 @@ public class App {
                         electoralParty = new ElectoralParty(electoralPartyId, electoralPartyAcronym, electoralPartyFederationId);
                         sistemaEleitoral.addElectoralParty(electoralParty);
                     }
+                    
+
+                    //adicionar aqui a quantidade de candidatos eleitos do partido ou fazer a leitura toda vez q for printar
 
                     if(candidateType == EnumCandidateType.FEDERAL){
                         candidate = new FederalCandidate(id, ballotBoxId, birthDate, gender, result, application, voteType, electoralParty);
                     }else{
                         candidate = new StateCandidate(id, ballotBoxId, birthDate, gender, result, application, voteType, electoralParty);
                     }
+
                     sistemaEleitoral.addCandidate(candidate);
                     //System.out.print(candidate.toStringDebug());
                 }
@@ -192,6 +196,8 @@ public class App {
     }
 }
 
+//estamos colocando a quantidade de candidatos eleitos, depois implementar funcoes do trabalho
 
+//enfase na contagem de nominais e legenda, talvez ele tenha errado
 
 // 547889
