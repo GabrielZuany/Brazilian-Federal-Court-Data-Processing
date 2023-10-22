@@ -1,7 +1,9 @@
 package bfcdp.electoralparty;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class ElectoralParty {
     private String id;                                               // equals to NR_PARTIDO
@@ -91,9 +93,14 @@ public class ElectoralParty {
 
     @Override
     public String toString(){
-        String string = "ElectoralParty: " + acronym + " - " + id + ", " + votesNominais + votesLegenda + " votos" + " (" + votesNominais + " nominais e " + votesLegenda + " de legenda), " + candidatesWin;
+        Locale brLocale = Locale.forLanguageTag("pt-BR");
+		NumberFormat nfBr = NumberFormat.getNumberInstance(brLocale);
+        nfBr.setGroupingUsed(true);
+		nfBr.setMaximumFractionDigits(2);
+
+        String string = acronym + " - " + id + ", " + nfBr.format(votesNominais + votesLegenda) + " votos" + " (" + nfBr.format(votesNominais) + " nominais e " + nfBr.format(votesLegenda) + " de legenda), " + candidatesWin;
         if (candidatesWin > 1)
-            return string + " candidatos eleitos\n";
-        return string + " candidato eleito\n";
+            return string + " candidatos eleitos";
+        return string + " candidato eleito";
     }
 }

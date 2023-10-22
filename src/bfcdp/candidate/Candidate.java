@@ -1,6 +1,9 @@
 package bfcdp.candidate;
 
+import java.text.NumberFormat;
 import java.util.Date;
+import java.util.Locale;
+
 import bfcdp.electoralparty.ElectoralParty;
 import bfcdp.enums.EnumApplication;
 import bfcdp.enums.EnumGender;
@@ -90,10 +93,15 @@ public abstract class Candidate {
 
     @Override
     public String toString(){
+        Locale brLocale = Locale.forLanguageTag("pt-BR");
+		NumberFormat nfBr = NumberFormat.getNumberInstance(brLocale);
+        nfBr.setGroupingUsed(true);
+		nfBr.setMaximumFractionDigits(2);
+
         if (electoralParty.getFederationId().compareTo("-1") == 0)
-            return ballotBoxId + " (" + electoralParty.getAcronym() +  ", " + votes + " votos)";
+            return ballotBoxId + " (" + electoralParty.getAcronym() +  ", " + nfBr.format(votes) + " votos)";
         else
-            return "*" + ballotBoxId + " (" + electoralParty.getAcronym() +  ", " + votes + " votos)";
+            return "*" + ballotBoxId + " (" + electoralParty.getAcronym() +  ", " + nfBr.format(votes) + " votos)";
     }
 
     public String toStringDebug(){

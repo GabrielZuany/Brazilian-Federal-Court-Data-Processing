@@ -8,7 +8,10 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Scanner;
+import java.text.NumberFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Comparator;
 import java.util.Collections;
@@ -48,10 +51,7 @@ public class BFCDataProcessing {
 
     public ElectoralParty getElectoralPartyById(String electoralPartyId){
         for (ElectoralParty electoralParty : electoralParties) {
-            if(electoralParty.getId() == null){
-                return null;
-            }
-            if(electoralParty.getId().equals(electoralPartyId)){
+            if(electoralParty.getId().compareTo(electoralPartyId) == 0){
                 return electoralParty;
             }
         }
@@ -138,11 +138,34 @@ public class BFCDataProcessing {
         }   
     }
 
+    public static enum EnumComparatorVotosPartido implements Comparator<ElectoralParty>{
+        INSTANCE;
+        @Override
+        public int compare(ElectoralParty p1, ElectoralParty p2){
+            Locale brLocale = Locale.forLanguageTag("pt-BR");
+			NumberFormat nf = NumberFormat.getInstance(brLocale);
+
+            if(p1.getVotes() == p2.getVotes()){
+                try{
+                    int id1 = nf.parse(p1.getId()).intValue();
+                    int id2 = nf.parse(p2.getId()).intValue();
+                    return id1 - id2;
+                }catch (ParseException e) {
+			        System.out.println("Formato Inválido!");
+		        }
+            }
+            return p2.getVotes() - p1.getVotes();
+        }
+    }
+
     public void mostVotedParties(){
         List<ElectoralParty> electoralParties = getElectoralParties();
-        electoralParties.sort((c1, c2) -> c2.getVotes() - c1.getVotes());
+        Collections.sort(electoralParties, EnumComparatorVotosPartido.INSTANCE);
+
+        int count = 1;
         for (ElectoralParty electoralParty : electoralParties) {
-            System.out.println("Partido " + electoralParty.getAcronym() + " - " + electoralParty.getVotes() + " votos");
+            System.out.println(count + " - " + electoralParty.toString());
+            count++;
         }
     }
 
@@ -204,15 +227,22 @@ public class BFCDataProcessing {
     public void EleitosPorGenero() {
         int male = 0;
         for(Candidate c: this.candidates.values()){
-            if(c.getGender() == EnumGender.MALE){
-                male++;
+            if(c.getResult() == EnumResult.WIN){
+                if(c.getGender() == EnumGender.MALE) male++;
             }
         }
-        double male_percentage = ((double)male)/this.candidates.size();
-        double female_percentage = 1 - male_percentage;
+        
+        double male_percentage = (((double)male)*100)/this.numEleitos;
+        double female_percentage = 100-male_percentage;
+
+        Locale brLocale = Locale.forLanguageTag("pt-BR");
+		NumberFormat nfBr = NumberFormat.getNumberInstance(brLocale);
+        nfBr.setGroupingUsed(true);
+		nfBr.setMaximumFractionDigits(2);
+
         System.out.println("Eleitos, por gênero:");
-        System.out.println("Feminino: " + (candidates.size() - male) + "(" + female_percentage*100 + "%)");
-        System.out.println("Masculino: " + (candidates.size() - male) + "(" + male_percentage*100 + "%)");
+        System.out.println("Feminino: " + (nfBr.format(this.numEleitos - male)) + "(" + nfBr.format(female_percentage) + "%)");
+        System.out.println("Masculino: " + nfBr.format(male) + "(" + nfBr.format(male_percentage) + "%)");
     }
 
     public void EleitosPorFaixaEtaria() {
@@ -229,6 +259,7 @@ public class BFCDataProcessing {
     public void LeCandidatos(FileInputStream  fileCandidates, EnumCandidateType candidateType){
         Scanner scanner = new Scanner(fileCandidates, "ISO-8859-1");
         boolean skip = true;
+        boolean ghostCandidate = false;
 
         Candidate candidate = null;
         String id = null;                      // NR_CANDIDATO
@@ -262,8 +293,7 @@ public class BFCDataProcessing {
                         candidateType = EnumCandidateType.STATE;
                     }
                     else{
-                        skip = true;
-                        break;
+                        ghostCandidate = true;
                     }
                 }
                 if(idx == 16){
@@ -286,7 +316,7 @@ public class BFCDataProcessing {
                         birthDate = new SimpleDateFormat("dd/MM/yyyy").parse(items);
                     }catch(Exception e){
                         e.printStackTrace();
-                            System.out.println("Formato de data inválido!");
+                        System.out.println("Formato de data inválido!");
                     }
                 }
                 if(idx == 45){
@@ -311,34 +341,44 @@ public class BFCDataProcessing {
                     addElectoralParty(electoralParty);
                 }
 
-                if(candidateType == EnumCandidateType.FEDERAL){
-                    candidate = new FederalCandidate(id, ballotBoxId, birthDate, gender, result, application, voteType, electoralParty);
-                }else{
-                    candidate = new StateCandidate(id, ballotBoxId, birthDate, gender, result, application, voteType, electoralParty);
-                }
-
-                addCandidate(candidate);
-
-                if(candidate.getResult() == EnumResult.WIN){
-                    candidate.getElectoralParty().addCandidatesWin();
-                    addEleitos();
+                if(ghostCandidate == false){
+                    if(candidateType == EnumCandidateType.FEDERAL){
+                        candidate = new FederalCandidate(id, ballotBoxId, birthDate, gender, result, application, voteType, electoralParty);
+                        addCandidate(candidate);
+                    }else if(candidateType == EnumCandidateType.STATE){
+                        candidate = new StateCandidate(id, ballotBoxId, birthDate, gender, result, application, voteType, electoralParty);
+                        addCandidate(candidate);
+                    }
+    
+                    if(candidate.getResult() == EnumResult.WIN){
+                        candidate.getElectoralParty().addCandidatesWin();
+                        addEleitos();
+                    }
                 }
             }
             skip = false;
+            ghostCandidate = false;
         }
     }
 
     public void LeVotos(FileInputStream fileVotos, EnumCandidateType candidateType){
+
         Scanner scanner = new Scanner(fileVotos, "ISO-8859-1");
         String votableId = null;    //NR_VOTAVEL
         int votes = 0;              //QT_VOTOS_NOMINAIS
         boolean header = true;
-        boolean skip;
+        boolean skip = false;
+        boolean ghostCandidate = false;
+
         while(scanner.hasNextLine()){
             skip = false;
             String line = scanner.nextLine();
 
-            if(header){ header = false; continue; }
+            if(header){
+                header = false;
+                continue;
+            }
+
             line = line.replace("\"", "");
             String[] columns = line.split(";");
             
@@ -389,7 +429,5 @@ public class BFCDataProcessing {
                 e.addVotesLegenda(votes);
             }
         } 
-    }
-
-    
+    }    
 }

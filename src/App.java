@@ -15,10 +15,7 @@ import bfcdp.enums.EnumResult;
 import bfcdp.enums.EnumVoteType;
 
 
-//coloquei as leituras separadas da main, corrigi o erro de leitura para federal que existia e n sabiamos, criei as 3 primeiras funcoes de impressao e deixei o toString no formato certo
-//falta ajeitar o ponto no meio dos numeros, aquele metodo nao funciona, no meu computador ta printando virgula com ele, vamos ter q ver isso, eu tenho o codigo salvo de como colocar, posso fazer isso dps
-//deixei todas as impressoes no final da main p ir fazendo, vou dormir agr, n sei se consigo acordar 2h certinho, mas com certeza eu entro, pd comecar sem mim se quiser, vou entrar assim q acordar
-//implementei tbm o comparator de idade, ficou bem confuso devido a implementacao do Data, mas acho q ta funcionando, criei uma main e testei, funcionou mec, te mandei foto dela no zap
+// ta faltando votos nominais no partido 2 e 23 da impressao
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -47,14 +44,14 @@ public class App {
 
         sistemaEleitoral.numeroEleitos();
 
-        // sistemaEleitoral.DeputadosEleitos(candidateType);
-        // sistemaEleitoral.CandidatosMaisVotados(candidateType);
+        // sistemaEleitoral.DeputadosEleitos(candidateType);       
+        // sistemaEleitoral.CandidatosMaisVotados(candidateType);   
         // * sistemaEleitoral.TeriamSidoEleitos();
         // * sistemaEleitoral.EleitosBeneficiados();
         sistemaEleitoral.mostVotedParties();
         // * sistemaEleitoral.PrimeiroEUltimoColocadosPorPartido();
-        sistemaEleitoral.EleitosPorFaixaEtaria();
-        sistemaEleitoral.EleitosPorGenero();
+        // *sistemaEleitoral.EleitosPorFaixaEtaria();
+        // sistemaEleitoral.EleitosPorGenero();                     OK
         // * sistemaEleitoral.ResumoVotos();
     }
 }
