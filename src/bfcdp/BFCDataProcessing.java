@@ -139,10 +139,10 @@ public class BFCDataProcessing {
     }
 
     public void mostVotedParties(){
-        List<ElectoralParty> partidos = getElectoralParties();
-        partidos.sort((c1, c2) -> c2.getVotes() - c1.getVotes());
-        for (int i = 0; i < 10; i++) {
-            System.out.print(partidos.get(i).toString());
+        List<ElectoralParty> electoralParties = getElectoralParties();
+        electoralParties.sort((c1, c2) -> c2.getVotes() - c1.getVotes());
+        for (ElectoralParty electoralParty : electoralParties) {
+            System.out.println("Partido " + electoralParty.getAcronym() + " - " + electoralParty.getVotes() + " votos");
         }
     }
 
@@ -165,7 +165,7 @@ public class BFCDataProcessing {
                 return c1.getBirthDate().compareTo(c2.getBirthDate());
             }
             return c2.getVotes() - c1.getVotes();
-            }
+        }
     }
     
     public void DeputadosEleitos(EnumCandidateType candidateType){
@@ -199,6 +199,31 @@ public class BFCDataProcessing {
             if(count == this.numEleitos) break;
         }
 
+    }
+
+    public void EleitosPorGenero() {
+        int male = 0;
+        for(Candidate c: this.candidates.values()){
+            if(c.getGender() == EnumGender.MALE){
+                male++;
+            }
+        }
+        double male_percentage = ((double)male)/this.candidates.size();
+        double female_percentage = 1 - male_percentage;
+        System.out.println("Eleitos, por gênero:");
+        System.out.println("Feminino: " + (candidates.size() - male) + "(" + female_percentage*100 + "%)");
+        System.out.println("Masculino: " + (candidates.size() - male) + "(" + male_percentage*100 + "%)");
+    }
+
+    public void EleitosPorFaixaEtaria() {
+        /*
+         * Eleitos, por faixa etária (na data da eleição): 
+                  Idade < 30: 1 (3,33%) 
+            30 <= Idade < 40: 6 (20,00%) 
+            40 <= Idade < 50: 8 (26,67%) 
+            50 <= Idade < 60: 6 (20,00%) 
+            60 <= Idade     : 9 (30,00%)
+         */
     }
 
     public void LeCandidatos(FileInputStream  fileCandidates, EnumCandidateType candidateType){
@@ -365,6 +390,6 @@ public class BFCDataProcessing {
             }
         } 
     }
-    
 
+    
 }

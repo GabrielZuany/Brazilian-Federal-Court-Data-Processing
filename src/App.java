@@ -47,15 +47,15 @@ public class App {
 
         sistemaEleitoral.numeroEleitos();
 
-        sistemaEleitoral.DeputadosEleitos(candidateType);
-        sistemaEleitoral.CandidatosMaisVotados(candidateType);
-        // sistemaEleitoral.TeriamSidoEleitos();
-        // sistemaEleitoral.EleitosBeneficiados();
-        // sistemaEleitoral.mostVotedParties();
-        // sistemaEleitoral.PrimeiroEUltimoColocadosPorPartido();
-        // sistemaEleitoral.EleitosPorFaixaEtaria();
-        // sistemaEleitoral.EleitosPorGenero();
-        // sistemaEleitoral.ResumoVotos();
+        // sistemaEleitoral.DeputadosEleitos(candidateType);
+        // sistemaEleitoral.CandidatosMaisVotados(candidateType);
+        // * sistemaEleitoral.TeriamSidoEleitos();
+        // * sistemaEleitoral.EleitosBeneficiados();
+        sistemaEleitoral.mostVotedParties();
+        // * sistemaEleitoral.PrimeiroEUltimoColocadosPorPartido();
+        sistemaEleitoral.EleitosPorFaixaEtaria();
+        sistemaEleitoral.EleitosPorGenero();
+        // * sistemaEleitoral.ResumoVotos();
     }
 }
 
