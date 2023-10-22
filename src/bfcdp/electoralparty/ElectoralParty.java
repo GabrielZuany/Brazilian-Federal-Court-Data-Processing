@@ -91,7 +91,7 @@ public class ElectoralParty {
 
     @Override
     public String toString(){
-        String string = "ElectoralParty: " + acronym + " - " + id + ", " + String.format("%,d", (votesNominais + votesLegenda)) + " votos" + " (" + String.format("%,d", votesNominais) + " nominais e " + String.format("%,d", votesLegenda) + " de legenda), " + String.format("%,d", candidatesWin);
+        String string = "ElectoralParty: " + acronym + " - " + id + ", " + votesNominais + votesLegenda + " votos" + " (" + votesNominais + " nominais e " + votesLegenda + " de legenda), " + candidatesWin;
         if (candidatesWin > 1)
             return string + " candidatos eleitos\n";
         return string + " candidato eleito\n";

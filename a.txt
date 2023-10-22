@@ -3,7 +3,7 @@ java -cp bin App
 
 
 java -cp bin App --estadual inputs/consulta_cand_2022/consulta_cand_2022_ES.csv inputs/votacao_secao_2022_ES/votacao_secao_2022_ES.csv 02/10/2022
-
+java -jar deputados.jar --estadual inputs/consulta_cand_2022/consulta_cand_2022_ES.csv inputs/votacao_secao_2022_ES/votacao_secao_2022_ES.csv 02/10/2022
 
 id[0] DT_GERACAO
 id[1] HH_GERACAO
