@@ -23,7 +23,7 @@ public class StateCandidate extends Candidate{
 
     @Override
     public String toString(){
-        return "StateCandidate: " + super.toString();
+        return super.toString();
     }
     
 }

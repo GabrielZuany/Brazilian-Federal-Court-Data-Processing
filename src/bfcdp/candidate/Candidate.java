@@ -90,11 +90,14 @@ public abstract class Candidate {
 
     @Override
     public String toString(){
-        return ballotBoxId + " (" + electoralParty.getAcronym() +  ", " + votes + " votos)\n";
+        if (electoralParty.getFederationId().compareTo("-1") == 0)
+            return ballotBoxId + " (" + electoralParty.getAcronym() +  ", " + votes + " votos)";
+        else
+            return "*" + ballotBoxId + " (" + electoralParty.getAcronym() +  ", " + votes + " votos)";
     }
 
     public String toStringDebug(){
-        return ballotBoxId + "  |  " + id + "  |  " + birthDate + "  |  " + gender + "  |  " + result + "  |  " + application + "  |  " + voteType + "  |  " + electoralParty.getAcronym() + "  |  " + votes + "\n";
+        return ballotBoxId + "  |  " + id + "  |  " + birthDate + "  |  " + gender + "  |  " + result + "  |  " + application + "  |  " + voteType + "  |  " + electoralParty.getAcronym() + "  |  " + votes;
     }
 
     

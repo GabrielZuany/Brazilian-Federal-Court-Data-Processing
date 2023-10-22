@@ -23,6 +23,6 @@ public class FederalCandidate extends Candidate{
 
     @Override
     public String toString(){
-        return "FederalCandidate: " + super.toString();
+        return super.toString();
     }
 }
