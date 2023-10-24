@@ -111,8 +111,7 @@ public class BFCDataProcessing {
             electoralParties.remove(electoralParty);
         }
     }
-
-    // item 6 da especificacao
+    
     public void partiesVoteRelatory(){
         int partyVotes = 0;
         int totalWinners = 0;
@@ -428,7 +427,6 @@ public class BFCDataProcessing {
         Scanner scanner = new Scanner(fileCandidates, "ISO-8859-1");
         boolean skip = true;
         boolean ghostCandidate = false;
-
         Candidate candidate = null;
         String id = null;                      // NR_CANDIDATO
         String ballotBoxId = null;             // NM_URNA_CANDIDATO
@@ -454,13 +452,7 @@ public class BFCDataProcessing {
                     break;
                 }
                 if(idx == 13){
-                    if(items.equals("6") && candidateType == EnumCandidateType.FEDERAL){
-                        candidateType = EnumCandidateType.FEDERAL;
-                    }
-                    else if(items.equals("7") && candidateType == EnumCandidateType.STATE){
-                        candidateType = EnumCandidateType.STATE;
-                    }
-                    else{
+                    if(!(items.equals("6") && candidateType == EnumCandidateType.FEDERAL) && !(items.equals("7") && candidateType == EnumCandidateType.STATE)){
                         ghostCandidate = true;
                     }
                 }
@@ -495,7 +487,6 @@ public class BFCDataProcessing {
                     result = items.equals("2") | items.equals("3")? EnumResult.WIN : EnumResult.LOSE;
                 }
                 if(idx == 67){
-                    //System.out.println(items);
                     if(items.equals("Válido (legenda)")){
                         voteType = EnumVoteType.LEGENDA;
                     }else if(items.equals("Válido")){
@@ -514,7 +505,6 @@ public class BFCDataProcessing {
                 electoralParty = getElectoralPartyById(electoralPartyId);
                 if(electoralParty == null){
                     electoralParty = new ElectoralParty(electoralPartyId, electoralPartyAcronym, electoralPartyFederationId);
-
                     addElectoralParty(electoralParty);
                 }
 
@@ -545,7 +535,6 @@ public class BFCDataProcessing {
         int votes = 0;              //QT_VOTOS_NOMINAIS
         boolean header = true;
         boolean skip = false;
-        boolean ghostCandidate = false;
 
         while(scanner.hasNextLine()){
             skip = false;
@@ -562,23 +551,13 @@ public class BFCDataProcessing {
             int idx = 0;    
             for (String items : columns) {
                 if(idx == 17){
-                    if(items.equals("6") && candidateType == EnumCandidateType.FEDERAL){
-                        candidateType = EnumCandidateType.FEDERAL;
-                    }
-                    else if(items.equals("7") && candidateType == EnumCandidateType.STATE){
-                        candidateType = EnumCandidateType.STATE;
-                    }
-                    else{
+                    if(!(items.equals("6") && candidateType == EnumCandidateType.FEDERAL) && !(items.equals("7") && candidateType == EnumCandidateType.STATE)){
                         skip = true;
                         break;
                     }
                 }
                 if(idx == 19){
                     votableId = items;
-                    if(items.equals("95") ||items.equals("96") ||items.equals("97") ||items.equals("98")){
-                        skip = true;
-                        break;
-                    }
                 }
                 if(idx == 21){
                     votes = Integer.parseInt(items);
@@ -598,9 +577,8 @@ public class BFCDataProcessing {
                 else if((c.getVoteType() == EnumVoteType.LEGENDA)){
                     c.getElectoralParty().addVotesLegenda(votes);
                 }
-                else if (e != null){
+            }else if (e != null){
                     e.addVotesLegenda(votes);
-                }
             }
         } 
     }    
