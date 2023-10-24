@@ -6,6 +6,7 @@ import java.util.Locale;
 
 import bfcdp.electoralparty.ElectoralParty;
 import bfcdp.enums.EnumApplication;
+import bfcdp.enums.EnumCandidateType;
 import bfcdp.enums.EnumGender;
 import bfcdp.enums.EnumResult;
 import bfcdp.enums.EnumVoteType;
@@ -49,6 +50,10 @@ public abstract class Candidate {
         this.electoralParty = electoralParty;
         this.voteType = voteType;
         this.votes = votes;
+    }
+
+    public EnumCandidateType getCandidateType(){
+        return null;
     }
 
     public String getId() {
