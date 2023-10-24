@@ -45,7 +45,7 @@ public class BFCDataProcessing {
         System.out.println("Número de vagas: " + numEleitos);
     }
 
-    public List<ElectoralParty> getElectoralParties() {
+    public ArrayList<ElectoralParty> getElectoralParties() {
         return new ArrayList<ElectoralParty>(electoralParties);
     }
 
@@ -162,6 +162,7 @@ public class BFCDataProcessing {
         List<ElectoralParty> electoralParties = getElectoralParties();
         Collections.sort(electoralParties, EnumComparatorVotosPartido.INSTANCE);
 
+        System.out.println("\nVotação dos partidos e número de candidatos eleitos:");
         int count = 1;
         for (ElectoralParty electoralParty : electoralParties) {
             System.out.println(count + " - " + electoralParty.toString());
@@ -190,7 +191,111 @@ public class BFCDataProcessing {
             return c2.getVotes() - c1.getVotes();
         }
     }
-    
+
+    public void TeriamSidoEleitos(){
+        List<Candidate> candidatos = getCandidates();
+        Collections.sort(candidatos, EnumComparatorVotosCandidato.INSTANCE);
+        int count = 0;
+
+        System.out.println("\nTeriam sido eleitos se a votação fosse majoritária, e não foram eleitos:\n(com sua posição no ranking de mais votados)");
+        for(Candidate c : candidatos){
+            count++;
+            if(c.getResult() == EnumResult.LOSE){
+                System.out.println(count + " - " + c.toString());
+                
+            }
+            if(count == this.numEleitos) break;
+        }
+    }
+
+    public void EleitosBeneficiados(){
+        List<Candidate> candidatos = getCandidates();
+        Collections.sort(candidatos, EnumComparatorVotosCandidato.INSTANCE);
+        int count = 0;
+        int maior = 0;
+
+        System.out.println("\nEleitos, que se beneficiaram do sistema proporcional:\n(com sua posição no ranking de mais votados)");
+        for(Candidate c : candidatos){
+            count++;
+            if(count == this.numEleitos){
+                maior = c.getVotes();
+                break;
+            }
+        }
+
+        count = 0;
+        for(Candidate c : candidatos){
+            count++;
+            if(c.getResult() == EnumResult.WIN){
+                if(c.getVotes() < maior){
+                    System.out.println(count + " - " + c.toString());
+                }
+            }
+        }
+    }
+
+
+    public void PrimeiroEUltimoColocadosPorPartido(){
+        System.out.println("\nPrimeiro e último colocados de cada partido:");
+        List<Candidate> candidatos = getCandidates();
+        Collections.sort(candidatos, EnumComparatorVotosCandidato.INSTANCE);
+        ArrayList<ElectoralParty> partidos = getElectoralParties();
+        int count = 0;
+        Candidate primeiro = null;
+        Candidate ultimo = null;
+        Locale brLocale = Locale.forLanguageTag("pt-BR");
+		NumberFormat nfBr = NumberFormat.getNumberInstance(brLocale);
+        nfBr.setGroupingUsed(true);
+		nfBr.setMaximumFractionDigits(2);
+
+
+        for(Candidate c : candidatos){
+            if(partidos.contains(c.getElectoralParty())){
+
+                partidos.remove(c.getElectoralParty());
+                if(c.getElectoralParty().getVotesNominais() == 0)
+                    continue;
+                count++;
+
+                List<String> candidatosId = c.getElectoralParty().getCandidatesId();
+                List<Candidate> candidatosDoPartido = new ArrayList<Candidate>();
+                for(String id : candidatosId){
+                    Candidate u = getCandidate(id);
+                    candidatosDoPartido.add(u);
+                }
+
+                Collections.sort(candidatosDoPartido, EnumComparatorVotosCandidato.INSTANCE);
+                primeiro = candidatosDoPartido.get(0);
+                
+                int i = 0;
+                do{
+                    i++;
+                    if(i == candidatosDoPartido.size()){
+                        ultimo = primeiro;
+                        break;
+                    }
+                    ultimo = candidatosDoPartido.get(candidatosDoPartido.size()-i);
+                }while(ultimo.getVotes() <= 0);
+
+             
+
+                String votoPrimeiro;
+                String votoUltimo;
+                if (primeiro.getVotes() < 2)
+                    votoPrimeiro = "voto";
+                else
+                    votoPrimeiro = "votos";
+                if (ultimo.getVotes() < 2)
+                    votoUltimo = "voto";
+                else
+                    votoUltimo = "votos";
+                System.out.println(count + " - "  + primeiro.getElectoralParty().getAcronym() + " - " + ultimo.getElectoralParty().getId() + ", " + primeiro.getBallotBoxId() + " (" + primeiro.getId() + ", " + nfBr.format(primeiro.getVotes()) + " " + votoPrimeiro + ")" + //
+                " / " + ultimo.getBallotBoxId() + " (" + ultimo.getId() + ", " + nfBr.format(ultimo.getVotes()) + " " + votoUltimo + ")");    
+            }
+        }
+
+    }   
+
     public void DeputadosEleitos(EnumCandidateType candidateType){
         List<Candidate> candidatos = getCandidates();
         Collections.sort(candidatos, EnumComparatorVotosCandidato.INSTANCE);
@@ -226,6 +331,7 @@ public class BFCDataProcessing {
 
     public void EleitosPorGenero() {
         int male = 0;
+        System.out.println();
         for(Candidate c: this.candidates.values()){
             if(c.getResult() == EnumResult.WIN){
                 if(c.getGender() == EnumGender.MALE) male++;
@@ -239,21 +345,83 @@ public class BFCDataProcessing {
 		NumberFormat nfBr = NumberFormat.getNumberInstance(brLocale);
         nfBr.setGroupingUsed(true);
 		nfBr.setMaximumFractionDigits(2);
+        nfBr.setMinimumFractionDigits(2);
 
         System.out.println("Eleitos, por gênero:");
-        System.out.println("Feminino: " + (nfBr.format(this.numEleitos - male)) + "(" + nfBr.format(female_percentage) + "%)");
-        System.out.println("Masculino: " + nfBr.format(male) + "(" + nfBr.format(male_percentage) + "%)");
+        System.out.println("Feminino:  " + (this.numEleitos - male) + " (" + nfBr.format(female_percentage) + "%)");
+        System.out.println("Masculino: " + male + " (" + nfBr.format(male_percentage) + "%)");
     }
 
-    public void EleitosPorFaixaEtaria() {
-        /*
-         * Eleitos, por faixa etária (na data da eleição): 
-                  Idade < 30: 1 (3,33%) 
-            30 <= Idade < 40: 6 (20,00%) 
-            40 <= Idade < 50: 8 (26,67%) 
-            50 <= Idade < 60: 6 (20,00%) 
-            60 <= Idade     : 9 (30,00%)
-         */
+    public void ResumoVotos(){
+        int nominais = 0;
+        int legenda = 0;
+        for(ElectoralParty p : getElectoralParties()){
+            nominais += p.getVotesNominais();
+            legenda += p.getVotesLegenda();
+        }
+        // Total de votos válidos: 2.077.274
+        // Total de votos nominais: 1.958.071 (94,26%)
+        // Total de votos de legenda: 119.203 (5,74%)
+        Locale brLocale = Locale.forLanguageTag("pt-BR");
+		NumberFormat nfBr = NumberFormat.getNumberInstance(brLocale);
+        nfBr.setGroupingUsed(true);
+		nfBr.setMaximumFractionDigits(2);
+        nfBr.setMinimumFractionDigits(2);
+
+        
+		NumberFormat intNfBr = NumberFormat.getNumberInstance(brLocale);
+        intNfBr.setGroupingUsed(true);
+		intNfBr.setMaximumFractionDigits(2);
+
+
+        System.out.println("\nTotal de votos válidos:    " + intNfBr.format(legenda + nominais));
+        System.out.println("Total de votos nominais:   " + intNfBr.format(nominais) + " (" + nfBr.format(((double)nominais*100)/(double)(legenda + nominais)) + "%)");
+        System.out.println("Total de votos de legenda: " + intNfBr.format(legenda) + " (" + nfBr.format(((double)legenda*100)/(double)(legenda + nominais)) + "%)");
+        System.out.print("\n\n");
+    }
+
+    public void EleitosPorFaixaEtaria(Date date) {
+        int idade30 = 0;
+        int idade40 = 0;
+        int idade50 = 0;
+        int idade60 = 0;
+        int idade60mais = 0;
+        List<Candidate> candidatos = getCandidates();
+
+        for(Candidate c : candidatos){
+            if(c.getResult() == EnumResult.LOSE) continue;
+            int idade = 0;
+
+            //considerando idade sempre maior que 0 anos
+            idade = date.getYear() - c.getBirthDate().getYear() - 1;
+            if(date.getMonth() > c.getBirthDate().getMonth()){
+                idade++;
+            }
+            else if(date.getMonth() == c.getBirthDate().getMonth()){
+                if(date.getDay() >= c.getBirthDate().getDay()){
+                    idade++;
+                }
+            }
+            
+            if(idade < 30) idade30++;
+            else if(30 <= idade && idade < 40) idade40++;
+            else if(40 <= idade && idade < 50) idade50++;
+            else if(50 <= idade && idade < 60) idade60++;
+            else if(60 <= idade) idade60mais++;
+
+        }
+        Locale brLocale = Locale.forLanguageTag("pt-BR");
+		NumberFormat nfBr = NumberFormat.getNumberInstance(brLocale);
+        nfBr.setGroupingUsed(true);
+		nfBr.setMinimumFractionDigits(2);
+        nfBr.setMaximumFractionDigits(2);
+
+        System.out.println("\nEleitos, por faixa etária (na data da eleição):");
+        System.out.println("      Idade < 30: " + idade30 + " (" + nfBr.format(((double)idade30*100)/(double)this.numEleitos) + "%)");
+        System.out.println("30 <= Idade < 40: " + idade40 + " (" + nfBr.format(((double)idade40*100)/(double)this.numEleitos) + "%)");
+        System.out.println("40 <= Idade < 50: " + idade50 + " (" + nfBr.format(((double)idade50*100)/(double)this.numEleitos) + "%)");
+        System.out.println("50 <= Idade < 60: " + idade60 + " (" + nfBr.format(((double)idade60*100)/(double)this.numEleitos) + "%)");
+        System.out.println("60 <= Idade     : " + idade60mais + " (" + nfBr.format(((double)idade60mais*100)/(double)this.numEleitos) + "%)");
     }
 
     public void LeCandidatos(FileInputStream  fileCandidates, EnumCandidateType candidateType){
@@ -312,11 +480,12 @@ public class BFCDataProcessing {
                     electoralPartyFederationId = items;
                 }
                 if(idx == 42){
+                    
                     try{
                         birthDate = new SimpleDateFormat("dd/MM/yyyy").parse(items);
                     }catch(Exception e){
-                        e.printStackTrace();
-                        System.out.println("Formato de data inválido!");
+                        //e.printStackTrace();
+                        //System.out.println("Formato de data inválido!");
                     }
                 }
                 if(idx == 45){
@@ -420,6 +589,7 @@ public class BFCDataProcessing {
             if(skip) continue;
 
             Candidate c = getCandidate(votableId);
+            ElectoralParty e = getElectoralPartyById(votableId); 
             if(c != null){
                 if((c.getVoteType() == EnumVoteType.NOMINAL) && c.getApplication().equals(EnumApplication.APPROVED)){
                     c.addVotes(votes);
@@ -428,9 +598,7 @@ public class BFCDataProcessing {
                 else if((c.getVoteType() == EnumVoteType.LEGENDA)){
                     c.getElectoralParty().addVotesLegenda(votes);
                 }
-            }else{
-                ElectoralParty e = getElectoralPartyById(votableId); 
-                if(e != null){
+                else if (e != null){
                     e.addVotesLegenda(votes);
                 }
             }

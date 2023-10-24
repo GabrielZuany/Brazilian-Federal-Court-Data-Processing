@@ -15,7 +15,7 @@ import bfcdp.enums.EnumResult;
 import bfcdp.enums.EnumVoteType;
 
 
-// ta faltando votos nominais no partido 2 e 23 da impressao
+// alteirei a leitura para n matar o programa cedo
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -43,16 +43,15 @@ public class App {
         }
 
         sistemaEleitoral.numeroEleitos();
-
-        // sistemaEleitoral.DeputadosEleitos(candidateType);       
-        // sistemaEleitoral.CandidatosMaisVotados(candidateType);   
-        // * sistemaEleitoral.TeriamSidoEleitos();
-        // * sistemaEleitoral.EleitosBeneficiados();
+        sistemaEleitoral.DeputadosEleitos(candidateType);       
+        sistemaEleitoral.CandidatosMaisVotados(candidateType);   
+        sistemaEleitoral.TeriamSidoEleitos();
+        sistemaEleitoral.EleitosBeneficiados();
         sistemaEleitoral.mostVotedParties();
-        // * sistemaEleitoral.PrimeiroEUltimoColocadosPorPartido();
-        // *sistemaEleitoral.EleitosPorFaixaEtaria();
-        // sistemaEleitoral.EleitosPorGenero();                     OK
-        // * sistemaEleitoral.ResumoVotos();
+        sistemaEleitoral.PrimeiroEUltimoColocadosPorPartido();
+        sistemaEleitoral.EleitosPorFaixaEtaria(date);
+        sistemaEleitoral.EleitosPorGenero();                     
+        sistemaEleitoral.ResumoVotos();
     }
 }
 
