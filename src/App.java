@@ -54,9 +54,3 @@ public class App {
         sistemaEleitoral.ResumoVotos();
     }
 }
-
-//estamos colocando a quantidade de candidatos eleitos, depois implementar funcoes do trabalho
-
-//enfase na contagem de nominais e legenda, talvez ele tenha errado
-
-// 547889
