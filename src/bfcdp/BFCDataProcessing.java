@@ -495,7 +495,15 @@ public class BFCDataProcessing {
                     result = items.equals("2") | items.equals("3")? EnumResult.WIN : EnumResult.LOSE;
                 }
                 if(idx == 67){
-                    voteType = items.equals("Válido (legenda)")? EnumVoteType.LEGENDA : EnumVoteType.NOMINAL;
+                    //System.out.println(items);
+                    if(items.equals("Válido (legenda)")){
+                        voteType = EnumVoteType.LEGENDA;
+                    }else if(items.equals("Válido")){
+                        voteType = EnumVoteType.NOMINAL;
+                    }else{
+                        skip = true;
+                        break;
+                    }
                 }
                 if(idx == 68){
                     application = (items.equals("2") | items.equals("16"))? EnumApplication.APPROVED : EnumApplication.REJECTED;
@@ -583,15 +591,16 @@ public class BFCDataProcessing {
             Candidate c = getCandidate(votableId);
             ElectoralParty e = getElectoralPartyById(votableId); 
             if(c != null){
-                if((c.getVoteType() == EnumVoteType.NOMINAL) && (c.getApplication() == EnumApplication.APPROVED)){
+                if((c.getVoteType() == EnumVoteType.NOMINAL) && c.getApplication().equals(EnumApplication.APPROVED)){
                     c.addVotes(votes);
                     c.getElectoralParty().addVotesNominais(votes);
                 }
                 else if((c.getVoteType() == EnumVoteType.LEGENDA)){
                     c.getElectoralParty().addVotesLegenda(votes);
                 }
-            }else if (e != null){
-                e.addVotesLegenda(votes);
+                else if (e != null){
+                    e.addVotesLegenda(votes);
+                }
             }
         } 
     }    
