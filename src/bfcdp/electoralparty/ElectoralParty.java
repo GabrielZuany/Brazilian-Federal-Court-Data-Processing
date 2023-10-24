@@ -98,7 +98,21 @@ public class ElectoralParty {
         nfBr.setGroupingUsed(true);
 		nfBr.setMaximumFractionDigits(2);
 
-        String string = acronym + " - " + id + ", " + nfBr.format(votesNominais + votesLegenda) + " votos" + " (" + nfBr.format(votesNominais) + " nominais e " + nfBr.format(votesLegenda) + " de legenda), " + candidatesWin;
+        String voto;
+        String nominal;
+        if((votesNominais + votesLegenda) < 2)
+            voto = " voto";
+        else
+            voto = " votos";
+        
+        if(votesNominais < 2){
+            nominal = " nominal e ";
+        }
+        else{
+            nominal = " nominais e ";
+        }
+
+        String string = acronym + " - " + id + ", " + nfBr.format(votesNominais + votesLegenda) + voto + " (" + nfBr.format(votesNominais) + nominal + nfBr.format(votesLegenda) + " de legenda), " + candidatesWin;
         if (candidatesWin > 1)
             return string + " candidatos eleitos";
         return string + " candidato eleito";
