@@ -2,8 +2,81 @@ javac src/**/**/*.java src/**/*.java src/*.java -d bin
 java -cp bin App
 
 
+java -cp bin App --estadual trabalho1-poo-script/testes/AL/in/candidatos.csv trabalho1-poo-script/testes/AL/in/votacao.csv 02/10/2022
+
 java -cp bin App --estadual inputs/consulta_cand_2022/consulta_cand_2022_ES.csv inputs/votacao_secao_2022_ES/votacao_secao_2022_ES.csv 02/10/2022
 java -jar deputados.jar --estadual inputs/consulta_cand_2022/consulta_cand_2022_ES.csv inputs/votacao_secao_2022_ES/votacao_secao_2022_ES.csv 02/10/2022
+
+
+                // rodar todos
+        AC
+java -cp bin App --estadual trabalho1-poo-script/testes/AC/in/candidatos.csv trabalho1-poo-script/testes/AC/in/votacao.csv 02/10/2022 > compare/meu.txt
+diff compare/meu.txt trabalho1-poo-script/testes/AC/out/output-estadual.txt
+
+java -cp bin App --federal trabalho1-poo-script/testes/AC/in/candidatos.csv trabalho1-poo-script/testes/AC/in/votacao.csv 02/10/2022 > compare/meu.txt
+diff compare/meu.txt trabalho1-poo-script/testes/AC/out/output-federal.txt
+
+        AL
+java -cp bin App --estadual trabalho1-poo-script/testes/AL/in/candidatos.csv trabalho1-poo-script/testes/AL/in/votacao.csv 02/10/2022 > compare/meu.txt
+diff compare/meu.txt trabalho1-poo-script/testes/AL/out/output-estadual.txt
+
+java -cp bin App --federal trabalho1-poo-script/testes/AL/in/candidatos.csv trabalho1-poo-script/testes/AL/in/votacao.csv 02/10/2022 > compare/meu.txt
+diff compare/meu.txt trabalho1-poo-script/testes/AL/out/output-federal.txt
+
+        MG
+java -cp bin App --estadual trabalho1-poo-script/testes/MG/in/candidatos.csv trabalho1-poo-script/testes/MG/in/votacao.csv 02/10/2022 > compare/meu.txt
+diff compare/meu.txt trabalho1-poo-script/testes/MG/out/output-estadual.txt
+
+java -cp bin App --federal trabalho1-poo-script/testes/MG/in/candidatos.csv trabalho1-poo-script/testes/MG/in/votacao.csv 02/10/2022 > compare/meu.txt
+diff compare/meu.txt trabalho1-poo-script/testes/MG/out/output-federal.txt
+
+        PE
+java -cp bin App --estadual trabalho1-poo-script/testes/PE/in/candidatos.csv trabalho1-poo-script/testes/PE/in/votacao.csv 02/10/2022 > compare/meu.txt
+diff compare/meu.txt trabalho1-poo-script/testes/PE/out/output-estadual.txt
+
+java -cp bin App --federal trabalho1-poo-script/testes/PE/in/candidatos.csv trabalho1-poo-script/testes/PE/in/votacao.csv 02/10/2022 > compare/meu.txt
+diff compare/meu.txt trabalho1-poo-script/testes/PE/out/output-federal.txt
+
+        RS
+java -cp bin App --estadual trabalho1-poo-script/testes/RS/in/candidatos.csv trabalho1-poo-script/testes/RS/in/votacao.csv 02/10/2022 > compare/meu.txt
+diff compare/meu.txt trabalho1-poo-script/testes/RS/out/output-estadual.txt
+
+java -cp bin App --federal trabalho1-poo-script/testes/RS/in/candidatos.csv trabalho1-poo-script/testes/RS/in/votacao.csv 02/10/2022 > compare/meu.txt
+diff compare/meu.txt trabalho1-poo-script/testes/RS/out/output-federal.txt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 id[0] DT_GERACAO
 id[1] HH_GERACAO

@@ -274,7 +274,7 @@ public class BFCDataProcessing {
                         break;
                     }
                     ultimo = candidatosDoPartido.get(candidatosDoPartido.size()-i);
-                }while(ultimo.getVotes() <= 0);
+                }while(ultimo.getApplication() != EnumApplication.APPROVED);
 
              
 
@@ -376,7 +376,7 @@ public class BFCDataProcessing {
         System.out.println("\nTotal de votos válidos:    " + intNfBr.format(legenda + nominais));
         System.out.println("Total de votos nominais:   " + intNfBr.format(nominais) + " (" + nfBr.format(((double)nominais*100)/(double)(legenda + nominais)) + "%)");
         System.out.println("Total de votos de legenda: " + intNfBr.format(legenda) + " (" + nfBr.format(((double)legenda*100)/(double)(legenda + nominais)) + "%)");
-        System.out.print("\n\n");
+        System.out.print("\n");
     }
 
     public void EleitosPorFaixaEtaria(Date date) {
@@ -492,8 +492,9 @@ public class BFCDataProcessing {
                     }else if(items.equals("Válido")){
                         voteType = EnumVoteType.NOMINAL;
                     }else{
-                        skip = true;
-                        break;
+                        ghostCandidate = true;
+                        // skip = true;
+                        // break;
                     }
                 }
                 if(idx == 68){

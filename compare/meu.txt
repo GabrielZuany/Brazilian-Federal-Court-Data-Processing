@@ -1,0 +1,266 @@
+Número de vagas: 77
+
+Deputados estaduais eleitos:
+1 - BRUNO ENGLER (PL, 637.412 votos)
+2 - *BEATRIZ CERQUEIRA (PT, 248.664 votos)
+3 - CASSIO SOARES (PSD, 132.382 votos)
+4 - ANTONIO CARLOS ARANTES (PL, 119.686 votos)
+5 - MAURO TRAMONTE (REPUBLICANOS, 110.741 votos)
+6 - ARLEN SANTIAGO (AVANTE, 107.236 votos)
+7 - NORALDINO JÚNIOR (PSC, 104.552 votos)
+8 - LEANDRO GENARO (PSD, 101.190 votos)
+9 - FÁBIO AVELAR (AVANTE, 99.317 votos)
+10 - TADEUZINHO (MDB, 96.862 votos)
+11 - TITO TORRES (PSD, 96.811 votos)
+12 - GUSTAVO VALADARES (PMN, 96.714 votos)
+13 - *ULYSSES GOMES (PT, 95.598 votos)
+14 - EDUARDO AZEVEDO (PSC, 92.624 votos)
+15 - *CRISTIANO SILVEIRA (PT, 90.271 votos)
+16 - GIL PEREIRA (PSD, 88.393 votos)
+17 - NEILANDO PIMENTA (PSB, 85.364 votos)
+18 - *DR. JEAN FREIRE (PT, 84.489 votos)
+19 - DELEGADO CHRISTIANO XAVIER (PSD, 83.535 votos)
+20 - ELISMAR PRADO (PROS, 83.344 votos)
+21 - CARLOS HENRIQUE (REPUBLICANOS, 82.881 votos)
+22 - IONE PINHEIRO (UNIÃO, 80.136 votos)
+23 - *MÁRIO HENRIQUE CAIXA (PV, 76.360 votos)
+24 - *RAUL BELÉM (CIDADANIA, 76.329 votos)
+25 - SARGENTO RODRIGUES (PL, 76.039 votos)
+26 - JOÃO MAGALHÃES (MDB, 75.285 votos)
+27 - DOORGAL ANDRADA (PATRIOTA, 73.338 votos)
+28 - ZÉ GUILHERME (PP, 72.376 votos)
+29 - DUARTE (PSD, 71.880 votos)
+30 - *BOSCO (CIDADANIA, 70.807 votos)
+31 - DR. PAULO (PATRIOTA, 70.569 votos)
+32 - ENES CANDIDO (PMN, 70.472 votos)
+33 - *MARQUINHO LEMOS (PT, 69.374 votos)
+34 - *LEONÍDIO BOUÇAS (PSDB, 69.355 votos)
+35 - *LOHANNA (PV, 67.178 votos)
+36 - DOUTOR WILSON BATISTA (PSD, 66.481 votos)
+37 - *LENINHA (PT, 65.864 votos)
+38 - CORONEL SANDRO (PL, 65.173 votos)
+39 - THIAGO COTA (PDT, 64.944 votos)
+40 - DOUGLAS MELO (PSD, 64.170 votos)
+41 - *JOÃO VITOR XAVIER (CIDADANIA, 62.597 votos)
+42 - *BETÃO (PT, 62.169 votos)
+43 - CHARLES SANTOS (REPUBLICANOS, 61.727 votos)
+44 - ARNALDO (UNIÃO, 61.059 votos)
+45 - ALENCAR DA SILVEIRA JR (PDT, 60.283 votos)
+46 - RAFAEL MARTINS (PSD, 60.142 votos)
+47 - LUD FALCAO (PODE, 59.381 votos)
+48 - DELEGADA SHEILA (PL, 58.003 votos)
+49 - BIM DA AMBULÂNCIA (AVANTE, 57.217 votos)
+50 - ROBERTO ANDRADE (PATRIOTA, 54.120 votos)
+51 - VITORIO JUNIOR (PP, 53.135 votos)
+52 - CAPOREZZO (PL, 52.168 votos)
+53 - DR MAURÍCIO (NOVO, 52.025 votos)
+54 - ZÉ LAVIOLA (NOVO, 51.913 votos)
+55 - *ANDREIA DE JESUS (PT, 51.120 votos)
+56 - *MACAÉ EVARISTO (PT, 50.416 votos)
+57 - *LUIZINHO (PT, 47.644 votos)
+58 - *PROFESSOR CLEITON (CLEITINHO) (PV, 47.184 votos)
+59 - *BETINHO PINTO COELHO ALBERTO (PV, 45.113 votos)
+60 - PROFESSOR WENDEL MESQUITA (SOLIDARIEDADE, 44.885 votos)
+61 - NAYARA ROCHA (PP, 44.619 votos)
+62 - *CELINHO SINTROCEL (PC do B, 44.262 votos)
+63 - *BELLA GONÇALVES (PSOL, 43.768 votos)
+64 - *RICARDO CAMPOS (PT, 43.690 votos)
+65 - GUSTAVO SANTANA (PL, 43.282 votos)
+66 - *LELECO PIMENTEL (PT, 43.143 votos)
+67 - MARIA CLARA MARRA (DC, 42.415 votos)
+68 - ALÊ PORTELA (PL, 42.179 votos)
+69 - GREGO (PMN, 38.936 votos)
+70 - OSCAR TEIXEIRA (PP, 34.442 votos)
+71 - CORONEL HENRIQUE (PL, 34.336 votos)
+72 - ADRIANO ALVARENGA (PP, 34.303 votos)
+73 - CHIARA BIONDINI (PP, 34.126 votos)
+74 - *LUCAS LASMAR (REDE, 34.092 votos)
+75 - *ANA PAULA SIQUEIRA (REDE, 33.621 votos)
+76 - MARLI RIBEIRO (PSC, 31.340 votos)
+77 - RODRIGO LOPES (UNIÃO, 28.270 votos)
+
+Candidatos mais votados (em ordem decrescente de votação e respeitando número de vagas):
+1 - BRUNO ENGLER (PL, 637.412 votos)
+2 - *BEATRIZ CERQUEIRA (PT, 248.664 votos)
+3 - CASSIO SOARES (PSD, 132.382 votos)
+4 - ANTONIO CARLOS ARANTES (PL, 119.686 votos)
+5 - MAURO TRAMONTE (REPUBLICANOS, 110.741 votos)
+6 - ARLEN SANTIAGO (AVANTE, 107.236 votos)
+7 - NORALDINO JÚNIOR (PSC, 104.552 votos)
+8 - LEANDRO GENARO (PSD, 101.190 votos)
+9 - FÁBIO AVELAR (AVANTE, 99.317 votos)
+10 - TADEUZINHO (MDB, 96.862 votos)
+11 - TITO TORRES (PSD, 96.811 votos)
+12 - GUSTAVO VALADARES (PMN, 96.714 votos)
+13 - *ULYSSES GOMES (PT, 95.598 votos)
+14 - EDUARDO AZEVEDO (PSC, 92.624 votos)
+15 - *CRISTIANO SILVEIRA (PT, 90.271 votos)
+16 - GIL PEREIRA (PSD, 88.393 votos)
+17 - NEILANDO PIMENTA (PSB, 85.364 votos)
+18 - *DR. JEAN FREIRE (PT, 84.489 votos)
+19 - DELEGADO CHRISTIANO XAVIER (PSD, 83.535 votos)
+20 - ELISMAR PRADO (PROS, 83.344 votos)
+21 - CARLOS HENRIQUE (REPUBLICANOS, 82.881 votos)
+22 - IONE PINHEIRO (UNIÃO, 80.136 votos)
+23 - *MÁRIO HENRIQUE CAIXA (PV, 76.360 votos)
+24 - *RAUL BELÉM (CIDADANIA, 76.329 votos)
+25 - SARGENTO RODRIGUES (PL, 76.039 votos)
+26 - JOÃO MAGALHÃES (MDB, 75.285 votos)
+27 - DOORGAL ANDRADA (PATRIOTA, 73.338 votos)
+28 - ZÉ GUILHERME (PP, 72.376 votos)
+29 - DUARTE (PSD, 71.880 votos)
+30 - *BOSCO (CIDADANIA, 70.807 votos)
+31 - DR. PAULO (PATRIOTA, 70.569 votos)
+32 - ENES CANDIDO (PMN, 70.472 votos)
+33 - *MARQUINHO LEMOS (PT, 69.374 votos)
+34 - *LEONÍDIO BOUÇAS (PSDB, 69.355 votos)
+35 - *LOHANNA (PV, 67.178 votos)
+36 - DOUTOR WILSON BATISTA (PSD, 66.481 votos)
+37 - *LENINHA (PT, 65.864 votos)
+38 - CORONEL SANDRO (PL, 65.173 votos)
+39 - THIAGO COTA (PDT, 64.944 votos)
+40 - DOUGLAS MELO (PSD, 64.170 votos)
+41 - *JOÃO VITOR XAVIER (CIDADANIA, 62.597 votos)
+42 - *DALMO RIBEIRO (PSDB, 62.236 votos)
+43 - *BETÃO (PT, 62.169 votos)
+44 - CHARLES SANTOS (REPUBLICANOS, 61.727 votos)
+45 - ARNALDO (UNIÃO, 61.059 votos)
+46 - ALENCAR DA SILVEIRA JR (PDT, 60.283 votos)
+47 - RAFAEL MARTINS (PSD, 60.142 votos)
+48 - LUD FALCAO (PODE, 59.381 votos)
+49 - DELEGADA SHEILA (PL, 58.003 votos)
+50 - BIM DA AMBULÂNCIA (AVANTE, 57.217 votos)
+51 - ROBERTO ANDRADE (PATRIOTA, 54.120 votos)
+52 - VITORIO JUNIOR (PP, 53.135 votos)
+53 - CAPOREZZO (PL, 52.168 votos)
+54 - DR MAURÍCIO (NOVO, 52.025 votos)
+55 - ZÉ LAVIOLA (NOVO, 51.913 votos)
+56 - *ANDREIA DE JESUS (PT, 51.120 votos)
+57 - *MACAÉ EVARISTO (PT, 50.416 votos)
+58 - ZÉ REIS (PODE, 48.773 votos)
+59 - GUSTAVO MITRE (PSB, 48.562 votos)
+60 - *LUIZINHO (PT, 47.644 votos)
+61 - *PROFESSOR CLEITON (CLEITINHO) (PV, 47.184 votos)
+62 - *BETINHO PINTO COELHO ALBERTO (PV, 45.113 votos)
+63 - PROFESSOR WENDEL MESQUITA (SOLIDARIEDADE, 44.885 votos)
+64 - NAYARA ROCHA (PP, 44.619 votos)
+65 - MAKOTO SEKITA (PSD, 44.457 votos)
+66 - *CELINHO SINTROCEL (PC do B, 44.262 votos)
+67 - *BELLA GONÇALVES (PSOL, 43.768 votos)
+68 - *RICARDO CAMPOS (PT, 43.690 votos)
+69 - GUSTAVO SANTANA (PL, 43.282 votos)
+70 - *LELECO PIMENTEL (PT, 43.143 votos)
+71 - TONY CARLOS (MDB, 42.656 votos)
+72 - MARIA CLARA MARRA (DC, 42.415 votos)
+73 - ALÊ PORTELA (PL, 42.179 votos)
+74 - ADALCLEVER LOPES (PSD, 40.974 votos)
+75 - MUCIDA (PSB, 40.815 votos)
+76 - OSVALDO LOPES (PSD, 40.015 votos)
+77 - *JOÃO LEITE (PSDB, 39.835 votos)
+
+Teriam sido eleitos se a votação fosse majoritária, e não foram eleitos:
+(com sua posição no ranking de mais votados)
+42 - *DALMO RIBEIRO (PSDB, 62.236 votos)
+58 - ZÉ REIS (PODE, 48.773 votos)
+59 - GUSTAVO MITRE (PSB, 48.562 votos)
+65 - MAKOTO SEKITA (PSD, 44.457 votos)
+71 - TONY CARLOS (MDB, 42.656 votos)
+74 - ADALCLEVER LOPES (PSD, 40.974 votos)
+75 - MUCIDA (PSB, 40.815 votos)
+76 - OSVALDO LOPES (PSD, 40.015 votos)
+77 - *JOÃO LEITE (PSDB, 39.835 votos)
+
+Eleitos, que se beneficiaram do sistema proporcional:
+(com sua posição no ranking de mais votados)
+79 - GREGO (PMN, 38.936 votos)
+83 - OSCAR TEIXEIRA (PP, 34.442 votos)
+85 - CORONEL HENRIQUE (PL, 34.336 votos)
+86 - ADRIANO ALVARENGA (PP, 34.303 votos)
+87 - CHIARA BIONDINI (PP, 34.126 votos)
+88 - *LUCAS LASMAR (REDE, 34.092 votos)
+89 - *ANA PAULA SIQUEIRA (REDE, 33.621 votos)
+94 - MARLI RIBEIRO (PSC, 31.340 votos)
+99 - RODRIGO LOPES (UNIÃO, 28.270 votos)
+
+Votação dos partidos e número de candidatos eleitos:
+1 - PT - 13, 1.549.610 votos (1.411.089 nominais e 138.521 de legenda), 12 candidatos eleitos
+2 - PL - 22, 1.306.136 votos (1.238.343 nominais e 67.793 de legenda), 9 candidatos eleitos
+3 - PSD - 55, 1.143.330 votos (962.146 nominais e 181.184 de legenda), 9 candidatos eleitos
+4 - PP - 11, 833.221 votos (768.005 nominais e 65.216 de legenda), 6 candidatos eleitos
+5 - REPUBLICANOS - 10, 475.359 votos (463.184 nominais e 12.175 de legenda), 3 candidatos eleitos
+6 - UNIÃO - 44, 451.748 votos (434.342 nominais e 17.406 de legenda), 3 candidatos eleitos
+7 - AVANTE - 70, 449.165 votos (432.158 nominais e 17.007 de legenda), 3 candidatos eleitos
+8 - PSC - 20, 433.134 votos (373.731 nominais e 59.403 de legenda), 3 candidatos eleitos
+9 - PV - 43, 407.441 votos (398.662 nominais e 8.779 de legenda), 4 candidatos eleitos
+10 - NOVO - 30, 377.651 votos (330.613 nominais e 47.038 de legenda), 2 candidatos eleitos
+11 - PATRIOTA - 51, 371.263 votos (358.857 nominais e 12.406 de legenda), 3 candidatos eleitos
+12 - PMN - 33, 369.047 votos (361.593 nominais e 7.454 de legenda), 3 candidatos eleitos
+13 - MDB - 15, 315.679 votos (296.987 nominais e 18.692 de legenda), 2 candidatos eleitos
+14 - PDT - 12, 313.735 votos (285.633 nominais e 28.102 de legenda), 2 candidatos eleitos
+15 - PSDB - 45, 299.427 votos (276.860 nominais e 22.567 de legenda), 1 candidato eleito
+16 - REDE - 18, 289.675 votos (284.006 nominais e 5.669 de legenda), 2 candidatos eleitos
+17 - CIDADANIA - 23, 253.678 votos (246.402 nominais e 7.276 de legenda), 3 candidatos eleitos
+18 - PSB - 40, 237.408 votos (229.616 nominais e 7.792 de legenda), 1 candidato eleito
+19 - PROS - 90, 218.897 votos (213.403 nominais e 5.494 de legenda), 1 candidato eleito
+20 - DC - 27, 211.746 votos (209.436 nominais e 2.310 de legenda), 1 candidato eleito
+21 - PODE - 19, 192.418 votos (184.447 nominais e 7.971 de legenda), 1 candidato eleito
+22 - SOLIDARIEDADE - 77, 153.241 votos (147.743 nominais e 5.498 de legenda), 1 candidato eleito
+23 - PSOL - 50, 136.262 votos (126.349 nominais e 9.913 de legenda), 1 candidato eleito
+24 - PC do B - 65, 115.403 votos (110.661 nominais e 4.742 de legenda), 1 candidato eleito
+25 - PTB - 14, 79.467 votos (71.634 nominais e 7.833 de legenda), 0 candidato eleito
+26 - PMB - 35, 37.832 votos (35.505 nominais e 2.327 de legenda), 0 candidato eleito
+27 - PRTB - 28, 29.122 votos (27.712 nominais e 1.410 de legenda), 0 candidato eleito
+28 - PCB - 21, 9.675 votos (5.205 nominais e 4.470 de legenda), 0 candidato eleito
+29 - UP - 80, 9.228 votos (8.110 nominais e 1.118 de legenda), 0 candidato eleito
+30 - PSTU - 16, 5.815 votos (3.946 nominais e 1.869 de legenda), 0 candidato eleito
+31 - PCO - 29, 789 votos (239 nominais e 550 de legenda), 0 candidato eleito
+32 - AGIR - 36, 0 voto (0 nominal e 0 de legenda), 0 candidato eleito
+
+Primeiro e último colocados de cada partido:
+1 - PL - 22, BRUNO ENGLER (22222, 637.412 votos) / HAISSA SIQUEIRA (22013, 102 votos)
+2 - PT - 13, BEATRIZ CERQUEIRA (13123, 248.664 votos) / THALES ALEGRO (13999, 1.035 votos)
+3 - PSD - 55, CASSIO SOARES (55555, 132.382 votos) / CARLOS RAPHAEL (55538, 39 votos)
+4 - REPUBLICANOS - 10, MAURO TRAMONTE (10800, 110.741 votos) / MC KATIA BH (10187, 26 votos)
+5 - AVANTE - 70, ARLEN SANTIAGO (70111, 107.236 votos) / PAULO HENRIQUE BENTO (70925, 47 votos)
+6 - PSC - 20, NORALDINO JÚNIOR (20123, 104.552 votos) / SANDRA CABELEREIRA (20109, 18 votos)
+7 - MDB - 15, TADEUZINHO (15300, 96.862 votos) / RENATO AMADO (15215, 36 votos)
+8 - PMN - 33, GUSTAVO VALADARES (33333, 96.714 votos) / ERICA JANAINA (33530, 4 votos)
+9 - PSB - 40, NEILANDO PIMENTA (40789, 85.364 votos) / MARCUS OLIVEIRA (40147, 14 votos)
+10 - PROS - 90, ELISMAR PRADO (90900, 83.344 votos) / TIA LUH DO PROJETO (90967, 6 votos)
+11 - UNIÃO - 44, IONE PINHEIRO (44141, 80.136 votos) / JULIANA ANDRIES  (44900, 63 votos)
+12 - PV - 43, MÁRIO HENRIQUE CAIXA (43333, 76.360 votos) / KENIA BORGES (43222, 433 votos)
+13 - CIDADANIA - 23, RAUL BELÉM (23700, 76.329 votos) / SILVINHA DAS PADARIAS (23245, 67 votos)
+14 - PATRIOTA - 51, DOORGAL ANDRADA (51300, 73.338 votos) / EVALDO DUARTE (51251, 69 votos)
+15 - PP - 11, ZÉ GUILHERME (11111, 72.376 votos) / MISSIONARIA VALERIA (11436, 36 votos)
+16 - PSDB - 45, LEONÍDIO BOUÇAS (45999, 69.355 votos) / RICARDO SILVEIRA (45557, 117 votos)
+17 - PDT - 12, THIAGO COTA (12000, 64.944 votos) / PERITA LECOQ (12569, 111 votos)
+18 - PODE - 19, LUD FALCAO (19123, 59.381 votos) / BRUNO RIBEIRO (19556, 17 votos)
+19 - NOVO - 30, DR MAURÍCIO (30230, 52.025 votos) / ONÉCIMO ANTUNES (30025, 493 votos)
+20 - SOLIDARIEDADE - 77, PROFESSOR WENDEL MESQUITA (77777, 44.885 votos) / LUCIANO FIETTO (77165, 34 votos)
+21 - PC do B - 65, CELINHO SINTROCEL (65112, 44.262 votos) / SÔNIA MORAS (65365, 305 votos)
+22 - PSOL - 50, BELLA GONÇALVES (50500, 43.768 votos) / HALLE (50321, 25 votos)
+23 - DC - 27, MARIA CLARA MARRA (27100, 42.415 votos) / ELAINE DE JESUS (27562, 0 voto)
+24 - REDE - 18, LUCAS LASMAR (18900, 34.092 votos) / BEL LIMA (18004, 22 votos)
+25 - PMB - 35, ENFERMEIRO GUSTAVO ARANTES (35123, 20.458 votos) / TATIANA HONORATO (35234, 5 votos)
+26 - PTB - 14, CIRO PEREIRA (14222, 19.971 votos) / MEIRE (14915, 28 votos)
+27 - PRTB - 28, TENENTE ALAN CARDEK (28888, 5.713 votos) / NENA DIELLI (28016, 16 votos)
+28 - UP - 80, MARIANA FERNANDES (80180, 5.671 votos) / THOMÁS TOLEDO (80123, 1.099 votos)
+29 - PCB - 21, DUDA DAS CADEIRAS (21210, 2.746 votos) / DIEGO ARTHUR (21021, 480 votos)
+30 - PSTU - 16, PROFESSORA DIANA DE CASSIA (16161, 1.070 votos) / ALDIERIO PEREIRA (16316, 281 votos)
+31 - PCO - 29, VINÍCIUS ROCHA NOGUEIRA (29000, 156 votos) / CORCINA FRANCISCO DA COSTA (29029, 83 votos)
+
+Eleitos, por faixa etária (na data da eleição):
+      Idade < 30: 6 (7,79%)
+30 <= Idade < 40: 15 (19,48%)
+40 <= Idade < 50: 25 (32,47%)
+50 <= Idade < 60: 18 (23,38%)
+60 <= Idade     : 13 (16,88%)
+
+Eleitos, por gênero:
+Feminino:  15 (19,48%)
+Masculino: 62 (80,52%)
+
+Total de votos válidos:    11.076.602
+Total de votos nominais:   10.296.617 (92,96%)
+Total de votos de legenda: 779.985 (7,04%)
+

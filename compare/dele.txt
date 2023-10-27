@@ -1,0 +1,135 @@
+Número de vagas: 27
+
+Deputados estaduais eleitos:
+1 - ALEXANDRE AYRES (MDB, 61.142 votos)
+2 - CABO BEBETO (PL, 51.721 votos)
+3 - MARCELO VICTOR (MDB, 51.259 votos)
+4 - FLÁVIA CAVALCANTE (MDB, 50.902 votos)
+5 - CIBELE MOURA (MDB, 46.120 votos)
+6 - FERNANDO PEREIRA (PP, 45.509 votos)
+7 - CARLA DANTAS (MDB, 44.477 votos)
+8 - RICARDO NEZINHO (MDB, 43.797 votos)
+9 - DR WANDERLEY (MDB, 43.512 votos)
+10 - ANTONIO ALBUQUERQUE (REPUBLICANOS, 41.748 votos)
+11 - FÁTIMA CANUTO (MDB, 41.319 votos)
+12 - REMI CALHEIROS (MDB, 39.947 votos)
+13 - BRUNO TOLEDO (MDB, 38.070 votos)
+14 - DELEGADO LEONAM (UNIÃO, 37.805 votos)
+15 - *RONALDO MEDEIROS (PT, 35.883 votos)
+16 - DUDU RONALSA (MDB, 35.792 votos)
+17 - ROSE DAVINO (PP, 34.343 votos)
+18 - INÁCIO LOIOLA (MDB, 33.270 votos)
+19 - FRANCISCO TENORIO (PP, 32.644 votos)
+20 - BRENO ALBUQUERQUE (MDB, 32.159 votos)
+21 - GILVAN FILHO (MDB, 32.035 votos)
+22 - LELO MAIA (UNIÃO, 31.706 votos)
+23 - ANDRE SILVA (REPUBLICANOS, 31.036 votos)
+24 - GABI GONCALVES (PP, 29.336 votos)
+25 - MESAQUE PADILHA (UNIÃO, 29.102 votos)
+26 - MARCOS BARBOSA (AVANTE, 20.761 votos)
+27 - *SILVIO CAMELO (PV, 19.714 votos)
+
+Candidatos mais votados (em ordem decrescente de votação e respeitando número de vagas):
+1 - ALEXANDRE AYRES (MDB, 61.142 votos)
+2 - CABO BEBETO (PL, 51.721 votos)
+3 - MARCELO VICTOR (MDB, 51.259 votos)
+4 - FLÁVIA CAVALCANTE (MDB, 50.902 votos)
+5 - CIBELE MOURA (MDB, 46.120 votos)
+6 - FERNANDO PEREIRA (PP, 45.509 votos)
+7 - CARLA DANTAS (MDB, 44.477 votos)
+8 - RICARDO NEZINHO (MDB, 43.797 votos)
+9 - DR WANDERLEY (MDB, 43.512 votos)
+10 - ANTONIO ALBUQUERQUE (REPUBLICANOS, 41.748 votos)
+11 - FÁTIMA CANUTO (MDB, 41.319 votos)
+12 - REMI CALHEIROS (MDB, 39.947 votos)
+13 - BRUNO TOLEDO (MDB, 38.070 votos)
+14 - DELEGADO LEONAM (UNIÃO, 37.805 votos)
+15 - *RONALDO MEDEIROS (PT, 35.883 votos)
+16 - DUDU RONALSA (MDB, 35.792 votos)
+17 - ROSE DAVINO (PP, 34.343 votos)
+18 - INÁCIO LOIOLA (MDB, 33.270 votos)
+19 - FRANCISCO TENORIO (PP, 32.644 votos)
+20 - BRENO ALBUQUERQUE (MDB, 32.159 votos)
+21 - GILVAN FILHO (MDB, 32.035 votos)
+22 - LELO MAIA (UNIÃO, 31.706 votos)
+23 - ANDRE SILVA (REPUBLICANOS, 31.036 votos)
+24 - GALBA NOVAES (MDB, 29.821 votos)
+25 - HENRIQUE CHICÃO (REPUBLICANOS, 29.351 votos)
+26 - GABI GONCALVES (PP, 29.336 votos)
+27 - MESAQUE PADILHA (UNIÃO, 29.102 votos)
+
+Teriam sido eleitos se a votação fosse majoritária, e não foram eleitos:
+(com sua posição no ranking de mais votados)
+24 - GALBA NOVAES (MDB, 29.821 votos)
+25 - HENRIQUE CHICÃO (REPUBLICANOS, 29.351 votos)
+
+Eleitos, que se beneficiaram do sistema proporcional:
+(com sua posição no ranking de mais votados)
+35 - MARCOS BARBOSA (AVANTE, 20.761 votos)
+37 - *SILVIO CAMELO (PV, 19.714 votos)
+
+Votação dos partidos e número de candidatos eleitos:
+1 - MDB - 15, 772.570 votos (726.725 nominais e 45.845 de legenda), 14 candidatos eleitos
+2 - PP - 11, 242.341 votos (217.949 nominais e 24.392 de legenda), 4 candidatos eleitos
+3 - UNIÃO - 44, 201.905 votos (195.693 nominais e 6.212 de legenda), 3 candidatos eleitos
+4 - REPUBLICANOS - 10, 137.822 votos (133.302 nominais e 4.520 de legenda), 2 candidatos eleitos
+5 - PT - 13, 72.248 votos (63.240 nominais e 9.008 de legenda), 1 candidato eleito
+6 - AVANTE - 70, 64.184 votos (63.373 nominais e 811 de legenda), 1 candidato eleito
+7 - PL - 22, 63.497 votos (61.418 nominais e 2.079 de legenda), 1 candidato eleito
+8 - PSD - 55, 37.794 votos (35.183 nominais e 2.611 de legenda), 0 candidato eleito
+9 - PV - 43, 27.702 votos (24.686 nominais e 3.016 de legenda), 1 candidato eleito
+10 - PSB - 40, 16.433 votos (14.312 nominais e 2.121 de legenda), 0 candidato eleito
+11 - PDT - 12, 6.839 votos (3.762 nominais e 3.077 de legenda), 0 candidato eleito
+12 - PC do B - 65, 6.396 votos (6.134 nominais e 262 de legenda), 0 candidato eleito
+13 - PSDB - 45, 3.996 votos (0 nominal e 3.996 de legenda), 0 candidato eleito
+14 - PTB - 14, 2.656 votos (734 nominais e 1.922 de legenda), 0 candidato eleito
+15 - PSOL - 50, 1.683 votos (905 nominais e 778 de legenda), 0 candidato eleito
+16 - UP - 80, 1.453 votos (1.327 nominais e 126 de legenda), 0 candidato eleito
+17 - SOLIDARIEDADE - 77, 1.348 votos (351 nominais e 997 de legenda), 0 candidato eleito
+18 - PMB - 35, 484 votos (283 nominais e 201 de legenda), 0 candidato eleito
+19 - PSTU - 16, 379 votos (86 nominais e 293 de legenda), 0 candidato eleito
+20 - CIDADANIA - 23, 348 votos (0 nominal e 348 de legenda), 0 candidato eleito
+21 - DC - 27, 140 votos (98 nominais e 42 de legenda), 0 candidato eleito
+22 - PRTB - 28, 0 voto (0 nominal e 0 de legenda), 0 candidato eleito
+23 - PCO - 29, 0 voto (0 nominal e 0 de legenda), 0 candidato eleito
+24 - PMN - 33, 0 voto (0 nominal e 0 de legenda), 0 candidato eleito
+25 - AGIR - 36, 0 voto (0 nominal e 0 de legenda), 0 candidato eleito
+26 - PATRIOTA - 51, 0 voto (0 nominal e 0 de legenda), 0 candidato eleito
+27 - PROS - 90, 0 voto (0 nominal e 0 de legenda), 0 candidato eleito
+
+Primeiro e último colocados de cada partido:
+1 - MDB - 15, ALEXANDRE AYRES (15151, 61.142 votos) / BORGES (15900, 384 votos)
+2 - PL - 22, CABO BEBETO (22222, 51.721 votos) / LIU CORREIA (22022, 64 votos)
+3 - PP - 11, FERNANDO PEREIRA (11000, 45.509 votos) / PLINIO SAMPAIO (11321, 4 votos)
+4 - REPUBLICANOS - 10, ANTONIO ALBUQUERQUE (10000, 41.748 votos) / CANTOR LUCIANO REY (10450, 146 votos)
+5 - UNIÃO - 44, DELEGADO LEONAM (44444, 37.805 votos) / SERGIO ANDRADE (44044, 64 votos)
+6 - PT - 13, RONALDO MEDEIROS (13000, 35.883 votos) / MICHELLE DA BANCADA DO BATOM (13111, 233 votos)
+7 - AVANTE - 70, MARCOS BARBOSA (70000, 20.761 votos) / HILTON DO VIOLAO (70654, 37 votos)
+8 - PV - 43, SILVIO CAMELO (43123, 19.714 votos) / BETH NORONHA (43555, 153 votos)
+9 - PSD - 55, TECA NELMA (55444, 13.650 votos) / MONIQUE BARROS (55007, 14 votos)
+10 - PC do B - 65, CICERO FILHO (65123, 3.609 votos) / TIA ADELAIDE (65100, 51 votos)
+11 - PSB - 40, MISSIONÁRIO ANDERSON (40222, 3.210 votos) / MARIANA SOARES (40234, 23 votos)
+12 - PDT - 12, MIGUEL SILVA (12345, 897 votos) / JANI SOUZA (12020, 16 votos)
+13 - UP - 80, VÂNIA GOMES (80180, 883 votos) / DERALDO FRANCISCO (80123, 444 votos)
+14 - PSOL - 50, IGOR SILVA MTST (50123, 455 votos) / EDUARDO LIMA (50120, 62 votos)
+15 - PTB - 14, ROBERTO SARAPÓ (14444, 422 votos) / BELMIRA YLANA (14568, 32 votos)
+16 - SOLIDARIEDADE - 77, MARCELO ALVES (77777, 351 votos) / MARCELO ALVES (77777, 351 votos)
+17 - PMB - 35, BOMBEIRO WEMISON (35222, 144 votos) / BENEDITA FERNANDES (35500, 20 votos)
+18 - DC - 27, LUCELIA ARAUJO (27222, 98 votos) / LUCELIA ARAUJO (27222, 98 votos)
+19 - PSTU - 16, MANOEL MOISÉS (16000, 86 votos) / MANOEL MOISÉS (16000, 86 votos)
+
+Eleitos, por faixa etária (na data da eleição):
+      Idade < 30: 2 (7,41%)
+30 <= Idade < 40: 6 (22,22%)
+40 <= Idade < 50: 8 (29,63%)
+50 <= Idade < 60: 6 (22,22%)
+60 <= Idade     : 5 (18,52%)
+
+Eleitos, por gênero:
+Feminino:  6 (22,22%)
+Masculino: 21 (77,78%)
+
+Total de votos válidos:    1.662.218
+Total de votos nominais:   1.549.561 (93,22%)
+Total de votos de legenda: 112.657 (6,78%)
+
