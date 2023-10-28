@@ -9,7 +9,6 @@ import bfcdp.enums.EnumGender;
 import bfcdp.enums.EnumResult;
 import bfcdp.enums.EnumVoteType;
 
-
 public class StateCandidate extends Candidate{
 
     public StateCandidate(String id, String ballotBoxId, Date birthDate, EnumGender gender, EnumResult result,
@@ -31,5 +30,4 @@ public class StateCandidate extends Candidate{
     public String toString(){
         return super.toString();
     }
-    
 }
