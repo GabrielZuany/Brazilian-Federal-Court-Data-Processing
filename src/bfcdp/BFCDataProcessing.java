@@ -527,6 +527,7 @@ public class BFCDataProcessing {
             skip = false;
             ghostCandidate = false;
         }
+        scanner.close();
     }
 
     public void LeVotos(FileInputStream fileVotos, EnumCandidateType candidateType){
@@ -581,6 +582,7 @@ public class BFCDataProcessing {
             }else if (e != null){
                     e.addVotesLegenda(votes);
             }
-        } 
+        }
+        scanner.close(); 
     }    
 }

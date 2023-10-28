@@ -1,4 +1,5 @@
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
@@ -27,16 +28,26 @@ public class App {
 
 
         //LEITURA CANDIDATOS E PARTIDOS
-        try(FileInputStream fileCandidates = new FileInputStream(candidateQuery)){
+        try{
+            FileInputStream fileCandidates = new FileInputStream(candidateQuery);
             sistemaEleitoral.LeCandidatos(fileCandidates, candidateType);
+            fileCandidates.close();
+        }catch(FileNotFoundException fileException){
+            System.out.println(fileException.getMessage());
+            fileException.printStackTrace();
         }catch(Exception e){
             System.out.println("Arquivo de entrada Candidatos inexistente!");
             e.printStackTrace();
         }
 
         //LEITURA VOTOS
-        try(FileInputStream fileVotos =  new FileInputStream(votingSection)){
-            sistemaEleitoral.LeVotos(fileVotos, candidateType);            
+        try{
+            FileInputStream fileVotos =  new FileInputStream(votingSection);
+            sistemaEleitoral.LeVotos(fileVotos, candidateType);    
+            fileVotos.close();
+        }catch(FileNotFoundException fileException){
+            System.out.println(fileException.getMessage());
+            fileException.printStackTrace();
         }catch(Exception e){
             System.out.println(e.getMessage());
             e.printStackTrace();
