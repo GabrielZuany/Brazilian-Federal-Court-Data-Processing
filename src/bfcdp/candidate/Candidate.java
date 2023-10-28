@@ -11,7 +11,6 @@ import bfcdp.enums.EnumGender;
 import bfcdp.enums.EnumResult;
 import bfcdp.enums.EnumVoteType;
 
-
 public abstract class Candidate {
     private String id;                      // NR_CANDIDATO
     private String ballotBoxId;             // NM_URNA_CANDIDATO
@@ -112,6 +111,4 @@ public abstract class Candidate {
     public String toStringDebug(){
         return ballotBoxId + "  |  " + id + "  |  " + birthDate + "  |  " + gender + "  |  " + result + "  |  " + application + "  |  " + voteType + "  |  " + electoralParty.getAcronym() + "  |  " + votes;
     }
-
-    
 }
