@@ -400,7 +400,7 @@ public class BFCDataProcessing {
         System.out.println("60 <= Idade     : " + idade60mais + " (" + nfBr.format(((double)idade60mais*100)/(double)this.countElectedCandidates) + "%)");
     }
 
-    public void ReadCandidates(FileInputStream  fileCandidates, EnumCandidateType candidateType){
+    public void readCandidates(FileInputStream  fileCandidates, EnumCandidateType candidateType){
         Scanner scanner = new Scanner(fileCandidates, "ISO-8859-1");
         boolean skip = true;
         boolean ghostCandidate = false;
@@ -474,7 +474,7 @@ public class BFCDataProcessing {
         scanner.close();
     }
 
-    public void ReadVotes(FileInputStream fileVotos, EnumCandidateType candidateType){
+    public void readVotes(FileInputStream fileVotos, EnumCandidateType candidateType){
         Scanner scanner = new Scanner(fileVotos, "ISO-8859-1");
         String votableId = null;    //NR_VOTAVEL
         int votes = 0;              //QT_VOTOS_NOMINAIS

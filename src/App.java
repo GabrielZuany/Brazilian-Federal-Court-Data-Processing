@@ -15,7 +15,7 @@ public class App {
 
         try{
             FileInputStream candidatesFile = new FileInputStream(candidateQuery);
-            electoralSystem.ReadCandidates(candidatesFile, candidateType);
+            electoralSystem.readCandidates(candidatesFile, candidateType);
             candidatesFile.close();
         }catch(FileNotFoundException fileException){
             System.out.println(fileException.getMessage());
@@ -27,7 +27,7 @@ public class App {
 
         try{
             FileInputStream votesFile =  new FileInputStream(votingSection);
-            electoralSystem.ReadVotes(votesFile, candidateType);    
+            electoralSystem.readVotes(votesFile, candidateType);    
             votesFile.close();
         }catch(FileNotFoundException fileException){
             System.out.println(fileException.getMessage());
